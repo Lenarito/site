@@ -269,7 +269,8 @@ footer {
     }
 
     .usage h2 {
-        font-size: 28px; /* Уменьшаем размер заголовка секции использования */
+        font-size: 28px;
+        margin-bottom: 30px;
     }
 
     .usage p, .usage li {
@@ -281,7 +282,7 @@ footer {
     }
 
     .contacts {
-        padding: 10px; /* Уменьшаем отступы в контактах */
+        padding: 30px; /* Уменьшаем отступы в контактах */
     }
 
     .contacts h2 {
