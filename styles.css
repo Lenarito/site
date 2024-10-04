@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #000000;
+}
+
+.header {
+    position: relative;
+    background: url('background.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden; /* Обрезаем границы при необходимости */
+}
+
+
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Градиент будет снизу */
+    left: 0;
+    width: 100%;
+    height: 100px; /* Высота градиента */
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Чёрный снизу, прозрачный сверху */
+    z-index: 2; /* Градиент находится выше картинки */
+}
+
+.gradient {
+    position: relative; 
+    height: 90px; 
+    background: linear-gradient(180deg, rgb(0, 0, 0) 10%, rgb(255, 255, 255) 73%);
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+}
+
+.logo {
+    position: absolute; 
+    top: 50px;  
+    left: 50px;  
+    width: 250px;
+    z-index: 3; 
+}
+
+h1 {
+    font-size: 4.5rem;
+    margin-bottom: 50px;
+    font-weight: 900;
+}
+
+p {
+    font-size: 2.3rem;
+    margin-bottom: 100px;
+    font-weight: 500;
+}
+
+.btn-consult {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 20px 50px;
+    background-color: #1e90ff;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    border-radius: 100px;
+}
+
+.btn-consult:hover {
+    background-color: #0056b3;
+}
+.rightimg  {
+    width: 50%;
+    float: right; 
+    margin: 50px 0 50px 7px; 
+   }
+   .desktop-only {
+    display: block; /* Отображать на десктопах */
+}
+.mobile-only {
+    display: none;
+}
+   .scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+    z-index: 3;
+}
+
+.scroll-down:hover {
+    color: #1e90ff;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translate(-50%, 0);
+    }
+    40% {
+        transform: translate(-50%, -10px);
+    }
+    60% {
+        transform: translate(-50%, -5px);
+    }
+}
+
+.usage {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.usage h2 {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-bottom: 80px;
+}
+
+.usage p {
+    color: #434343;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto 0px;
+    font-size: 20px;
+}
+
+
+.usage li {
+    color: #434343;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto 0px;
+    font-size: 20px;
+    padding: 0;
+}
+
+
+
+.full-width-container {
+    width: 100%;
+    background-color: #4a4a4a; /* Цвет фона */
+    padding:  0;
+}
+
+.inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 400px; /* Высота контейнера */
+}
+
+.contacts {
+    color: white;
+    flex: 1;
+    padding-right: 20px;
+    margin: auto 0;
+}
+
+.contacts h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.contacts p {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contacts a {
+    color: white;
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+.contacts a:hover {
+    text-decoration: underline;
+}
+
+.map {
+    flex: 1;
+    height: 100%;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+}
+
+
+
+
+
+footer {
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none; /* Скрыть изображение на мобильных */
+    }
+    
+    .mobile-only {
+        display: block; /* Отображать изображение на мобильных */
+        width: 100%; /* Ширина 100% */
+        max-height: 300px; /* Ограничиваем высоту изображения */
+        object-fit: contain; /* Масштабируем изображение без искажения */
+        margin: 10px 0; /* Уменьшаем отступы для мобильной версии */
+    }
+    h1 {
+        font-size: 2.5rem; /* Уменьшаем размер заголовка */
+    }
+
+    p {
+        font-size: 1.5rem; /* Уменьшаем размер текста */
+    }
+
+    .btn-consult {
+        padding: 15px 30px; /* Уменьшаем отступы кнопки */
+        font-size: 1rem; /* Уменьшаем размер шрифта кнопки */
+    }
+
+    .scroll-down {
+        font-size: 1.5rem; /* Уменьшаем размер стрелки */
+    }
+
+    .usage h2 {
+        font-size: 28px; /* Уменьшаем размер заголовка секции использования */
+    }
+
+    .usage p, .usage li {
+        font-size: 16px; /* Уменьшаем размер текста секции использования */
+    }
+
+    .inner-container {
+        flex-direction: column; /* Изменяем на колонку для мобильных */
+    }
+
+    .contacts {
+        padding: 10px; /* Уменьшаем отступы в контактах */
+    }
+
+    .contacts h2 {
+        font-size: 1.5rem; /* Уменьшаем размер заголовка в контактах */
+    }
+
+    .contacts p {
+        font-size: 16px; /* Уменьшаем размер текста в контактах */
+    }
+    .logo {
+        width: 150px; /* Уменьшаем размер логотипа для мобильных */
+        top: 30px; /* Можно также уменьшить отступ сверху, если нужно */
+        left: 20px; /* Можно уменьшить отступ слева */
+    }
+}

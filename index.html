@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ЦММ для инженерных изысканий. Профессиональная сдача и защита в экспертизе.">
+    <title>Вулкан Групп - ЦММ для инженерных изысканий</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <img src="logo.svg" alt="Вулкан Групп" class="logo">
+        <div class="header-content">
+            <h1>Создание ЦММ для инженерных изысканий</h1>
+            <p>Профессиональная сдача и защита в экспертизе</p>
+            <a href="#contact" class="btn-consult">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+            
+        </div>
+        <a href="#usage" class="scroll-down">
+            <span><svg width="50" height="28" viewBox="0 0 50 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.48047 2.58575L25 25.1052L47.5195 2.58575" stroke="white" stroke-width="3.823" stroke-linecap="round"/>
+                </svg></span>
+        </a>
+    </header>
+    <div class="gradient"></div>
+    <section id="usage" class="usage">
+        <h2>Где и для чего используется ЦММ</h2>
+        <p> <img src="цмм.png" alt="Пример использования ЦММ" class="rightimg desktop-only">Цифровая модель местности (ЦММ) — ключевой элемент инженерных изысканий, который применяется для точного проектирования и прохождения экспертизы проектной документации. 
+            Основные случаи использования ЦММ:<br>
+             <img src="цмм.png" alt="Пример использования ЦММ" class="usage-image mobile-only">
+            <li>Проектирование объектов капитального строительства: Автоматизированная разработка проектов для зданий и инженерных сооружений.</li>
+            <li>Картографирование рельефа: Оперативное создание карт с детальной информацией о высотах, рельефе и перепадах.3D-моделирование: Создание трёхмерных моделей с возможностью анализа участков, что необходимо для усиления грунтов и оптимизации земляных работ.</li>
+            <li>Вертикальная планировка: Проектирование по фактическим данным рельефа для точного планирования строительных площадок.</li>
+            <li>Топографическая съёмка: Оформление высокоточных карт с наложением горизонталей.</li>
+            <li>Экологические парметры: Оформление карт с наложением зон экологических ограничений и мест загрязнений в пределах диапазона отметок поверхности существующего рельефа.</li>
+            <li>Расчёт рентабельности: Определение стоимости подготовки площадки и расчёты для обеспечения баланса земляных масс.</li>
+            <li>Инженерные коммуникации: Прокладка подземных коммуникаций с соблюдением точных координат и нормативов.</li>
+            <li>Техническая документация: Подготовка текстовых и графических материалов для согласования в составе исходно-разрешительной документации.</li>
+            <li>ЦММ исключает ошибки человеческого фактора благодаря высокой автоматизации и точности оборудования, что делает её незаменимой для успешной реализации проектов.</li>
+            </p>
+            <p><b>Для объектов капитального строительства в Санкт-Петербурге результаты инженерных изысканий должны в обязательном порядке содержать цифровую модель местности для всех изысканий в соответствии с требованиями ЦГЭ.ЦИМ.РИИ-1.0.</b></p>
+    </section>
+
+
+    <div class="full-width-container" id="contact">
+        <div class="inner-container">
+            <div class="contacts">
+                <h2>Контакты</h2>
+                <p>Email: <a href="mailto:eco@progto.ru">eco@progto.ru</a></p>
+                <p>Номер: <a href="tel:+79811200310">+7 981 120 03 10</a></p>
+                <p>194291, г. Санкт-Петербург, пр. Луначарского 72 к.1, оф.19</p>
+            </div>
+            <div class="map">
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22546.381591276506!2d30.336812949029532!3d60.034347903771604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963499ae7e045f%3A0xfe5bb2283e4f09da!2z0L_RgC4g0JvRg9C90LDRh9Cw0YDRgdC60L7Qs9C-LCA3MiDQuiAxLCAxOSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NDI5MQ!5e0!3m2!1sru!2sru!4v1728037241253!5m2!1sru!2sru"
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+
+    <!-- <footer class="footer">
+        <p>© Вулкан Групп, 2024</p>
+    </footer> -->
+    <script>
+        $(document).ready(function() {
+            $('.scroll-down').on('click', function(event) {
+                event.preventDefault();  
+                var target = $(this).attr('href');
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top
+                }, 800); 
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
