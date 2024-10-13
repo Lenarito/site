@@ -1,62 +1,24 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Inter', sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
-    color: #000000;
+    height: 100%;
+    width: 100%;
 }
 
+
 .header {
+    padding: 0 80px;
     position: relative;
     background: url('background.jpeg') no-repeat center center/cover;
     height: 100vh;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 0 20px;
-    overflow: hidden; /* Обрезаем границы при необходимости */
-}
-
-
-
-.header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-}
-.header::after {
-    content: "";
-    position: absolute;
-    bottom: 0; /* Градиент будет снизу */
-    left: 0;
-    width: 100%;
-    height: 100px; /* Высота градиента */
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Чёрный снизу, прозрачный сверху */
-    z-index: 2; /* Градиент находится выше картинки */
-}
-
-.gradient {
-    position: relative; 
-    height: 90px; 
-    background: linear-gradient(180deg, rgb(0, 0, 0) 10%, rgb(255, 255, 255) 73%);
-}
-
-.header-content {
-    position: relative;
-    z-index: 2;
-    max-width: 1000px;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .logo {
@@ -67,47 +29,89 @@ body {
     z-index: 3; 
 }
 
-h1 {
+.header h1{
+    line-height: 1.2em;
+    color: white;
     font-size: 4.5rem;
     margin-bottom: 50px;
     font-weight: 900;
 }
 
-p {
-    font-size: 2.3rem;
-    margin-bottom: 100px;
-    font-weight: 500;
+.big-text {
+    color: #E7E7E7;
+    margin-bottom: 2.5rem;
+    font-size: 2.25rem;
+    font-weight: 400;
 }
+
+.small-text {
+    max-width: 900px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(270deg, rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.9));
+    z-index: 1;
+}
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    z-index: 2;
+}
+
+.gradient {
+    position: relative; 
+    height: 90px; 
+    background: linear-gradient(180deg, rgb(0, 0, 0) 10%, rgb(255, 255, 255) 73%);
+}
+
+.header-content {
+    padding: 0 20px;
+    width: 1200px;
+    max-width: 100%;
+    text-align: left;
+    z-index: 3;
+}
+
+
 
 .btn-consult {
     display: inline-block;
     margin-top: 20px;
-    padding: 20px 50px;
+    padding: 25px 50px;
     background-color: #1e90ff;
     color: white;
     text-decoration: none;
     font-size: 1.3rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-weight: 600;
+    font-weight: 800;
     border-radius: 100px;
 }
 
 .btn-consult:hover {
     background-color: #0056b3;
 }
-.rightimg  {
-    width: 50%;
-    float: right; 
-    margin: 50px 0 50px 7px; 
-   }
-   .desktop-only {
-    display: block; /* Отображать на десктопах */
-}
-.mobile-only {
-    display: none;
-}
-   .scroll-down {
+
+.scroll-down {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -136,59 +140,92 @@ p {
     }
 }
 
+
+
+
 .usage {
     padding: 50px 20px;
     background-color: #fff;
     text-align: center;
 }
 
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
 .usage h2 {
-    font-size: 42px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    margin-bottom: 80px;
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 .usage p {
     color: #434343;
-    text-align: left;
-    max-width: 1200px;
     margin: 0 auto 0px;
-    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5em;
 }
 
+.usage ul {
+    color: #434343;
+    font-size: 20px;
+    padding: 0;
+    list-style-position: inside;
+    margin: 0;
+}
 
 .usage li {
+    font-size: 1.25em;
     color: #434343;
     text-align: left;
     max-width: 1200px;
     margin: 0 auto 0px;
     font-size: 20px;
     padding: 0;
+    line-height: 1.5em;
+}
+
+
+.rightimg  {
+    width: 50%;
+    float: right; 
+    margin: 50px 0 50px 7px; 
+}
+
+.desktop-only {
+    display: block; 
+}
+
+.mobile-only {
+    display: none;
 }
 
 
 
 .full-width-container {
     width: 100%;
-    background-color: #4a4a4a; /* Цвет фона */
+    background-color: #4a4a4a; 
     padding:  0;
 }
 
 .inner-container {
+    padding: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-    height: 400px; /* Высота контейнера */
+    height: 400px;
 }
 
 .contacts {
     color: white;
     flex: 1;
-    padding-right: 20px;
+    padding: 0 20px;
     margin: auto 0;
 }
 
@@ -230,78 +267,119 @@ iframe {
 
 
 
-
-footer {
-    padding: 20px;
-    background-color: #222;
-    color: white;
-    text-align: center;
-}
-
-
 @media (max-width: 768px) {
-    .header-content {
+    .header {
         position: relative;
-        z-index: 2;
-        min-width: 400px;
+        background: url('background.jpeg') no-repeat center center/cover;
+        height: 100vh;
+        color: white;
+        display: flex;
+        padding: 0 20px;
     }
-    .desktop-only {
-        display: none; /* Скрыть изображение на мобильных */
+
+    .header-content {
+        padding: 0 20px;
+        text-align: center;
     }
     
-    .mobile-only {
-        display: block; /* Отображать изображение на мобильных */
-        width: 100%; /* Ширина 100% */
-        max-height: 300px; /* Ограничиваем высоту изображения */
-        object-fit: contain; /* Масштабируем изображение без искажения */
-        margin: 10px 0; /* Уменьшаем отступы для мобильной версии */
-    }
-    h1 {
-        font-size: 2.5rem; /* Уменьшаем размер заголовка */
+    .header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        text-align: center;
     }
 
-    p {
+    .big-text {
         font-size: 1.5rem;
-        margin-bottom: 50px; /* Уменьшаем размер текста */
+        margin-bottom: 1rem;
+    }
+
+    .small-text {
+        text-align: start;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .logo {
+        top: 20px;
+        left: 20px;
+        width: 150px;
+    }
+
+    .desktop-only {
+        display: none; 
     }
 
     .btn-consult {
-        padding: 15px 30px; /* Уменьшаем отступы кнопки */
-        font-size: 1rem; /* Уменьшаем размер шрифта кнопки */
+        padding: 15px 30px;
+        font-size: 1.1rem;
     }
 
     .scroll-down {
-        bottom: 50px;
-        font-size: 1.5rem; /* Уменьшаем размер стрелки */
+        font-size: 1.5rem;
     }
+    
+    .mobile-only {
+        display: block;
+        width: 100%; 
+        max-height: 300px; 
+        object-fit: contain; 
+        margin: 10px 0; 
+    }
+
+    
 
     .usage h2 {
         font-size: 28px;
         margin-bottom: 30px;
+        text-align: center;
     }
 
     .usage p, .usage li {
-        font-size: 16px; /* Уменьшаем размер текста секции использования */
+        font-size: 16px; 
     }
 
     .inner-container {
-        flex-direction: column; /* Изменяем на колонку для мобильных */
+        flex-direction: column; 
     }
 
     .contacts {
-        padding: 30px; /* Уменьшаем отступы в контактах */
+        padding: 30px; 
     }
 
     .contacts h2 {
-        font-size: 1.5rem; /* Уменьшаем размер заголовка в контактах */
+        font-size: 1.5rem; 
     }
 
     .contacts p {
-        font-size: 16px; /* Уменьшаем размер текста в контактах */
+        font-size: 16px; 
     }
     .logo {
-        width: 150px; /* Уменьшаем размер логотипа для мобильных */
-        top: 30px; /* Можно также уменьшить отступ сверху, если нужно */
-        left: 20px; /* Можно уменьшить отступ слева */
+        width: 150px; 
+        top: 30px; 
+        left: 20px;
     }
+}
+
+@media (min-width: 768px) {
+    .content-container2{
+        display: flex;
+    }
+    .left, .right {
+        flex: 1;
+        padding: 20px;
+    }
+    .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .right {
+        background-color: #fff;
+        padding: 40px;
+        color: #555;
+    }
+
 }
