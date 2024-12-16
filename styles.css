@@ -531,6 +531,23 @@ iframe {
         margin-bottom: 10px;
     }
 
+    .content .right h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .content .right ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-bottom: 20px; /* Добавим отступ снизу для списка */
+    }
+
+    .content .right li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        word-wrap: break-word; /* Добавим перенос слов */
+    }
+
     .consult-button {
         padding: 15px 20px;
         font-size: 1.2rem;
@@ -547,5 +564,18 @@ iframe {
     .arrow {
         font-size: 1.5rem;
     }
-}
 
+    .content .right {
+        overflow: auto; /* Добавим прокрутку, если контент не помещается */
+    }
+}
+@media (max-width: 768px) {
+    .content .block {
+        display: none; /* скрывает все блоки */
+    }
+    
+    .content .block.active {
+        display: flex; /* отображает активный блок */
+        flex-direction: column; /* элементы выстраиваются вертикально */
+    }
+}
