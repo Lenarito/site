@@ -1,13 +1,11 @@
-
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Golos Text', sans-serif;
     background-color: #f4f4f4;
     height: 100%;
     width: 100%;
 }
-
 
 .header {
     padding: 0 80px;
@@ -22,19 +20,19 @@ body {
 }
 
 .logo {
-    position: absolute; 
-    top: 50px;  
-    left: 50px;  
+    position: absolute;
+    top: 50px;
+    left: 50px;
     width: 250px;
-    z-index: 3; 
+    z-index: 3;
 }
 
-.header h1{
+.header h1 {
     line-height: 1.2em;
     color: white;
     font-size: 4.5rem;
     margin-bottom: 50px;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .big-text {
@@ -66,6 +64,7 @@ body {
     background: linear-gradient(270deg, rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.9));
     z-index: 1;
 }
+
 .header::after {
     content: "";
     position: absolute;
@@ -78,8 +77,8 @@ body {
 }
 
 .gradient {
-    position: relative; 
-    height: 90px; 
+    position: relative;
+    height: 90px;
     background: linear-gradient(180deg, rgb(0, 0, 0) 10%, rgb(255, 255, 255) 73%);
 }
 
@@ -91,8 +90,6 @@ body {
     z-index: 3;
 }
 
-
-
 .btn-consult {
     display: inline-block;
     margin-top: 20px;
@@ -103,7 +100,7 @@ body {
     font-size: 1.3rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-weight: 800;
+    font-weight: 700;
     border-radius: 100px;
 }
 
@@ -140,9 +137,6 @@ body {
     }
 }
 
-
-
-
 .usage {
     padding: 50px 20px;
     background-color: #fff;
@@ -154,6 +148,7 @@ body {
     margin: 0 auto;
     text-align: left;
 }
+
 .usage h2 {
     font-size: 2.7rem;
     font-weight: 700;
@@ -188,27 +183,24 @@ body {
     line-height: 1.5em;
 }
 
-
-.rightimg  {
+.rightimg {
     width: 50%;
-    float: right; 
-    margin: 50px 0 50px 7px; 
+    float: right;
+    margin: 50px 0 10px 7px;
 }
 
 .desktop-only {
-    display: block; 
+    display: block;
 }
 
 .mobile-only {
     display: none;
 }
 
-
-
 .full-width-container {
     width: 100%;
-    background-color: #4a4a4a; 
-    padding:  0;
+    background-color: #4a4a4a;
+    padding: 0;
 }
 
 .inner-container {
@@ -264,9 +256,6 @@ iframe {
     height: 300px;
 }
 
-
-
-
 @media (max-width: 768px) {
     .header {
         position: relative;
@@ -280,14 +269,12 @@ iframe {
     .header-content {
         padding: 0 20px;
         text-align: center;
-        
     }
-    
+
     .header h1 {
         font-size: 2.25rem;
         margin-bottom: 30px;
         text-align: start;
-        
     }
 
     .big-text {
@@ -309,7 +296,7 @@ iframe {
     }
 
     .desktop-only {
-        display: none; 
+        display: none;
     }
 
     .btn-consult {
@@ -321,16 +308,14 @@ iframe {
     .scroll-down {
         font-size: 1.5rem;
     }
-    
+
     .mobile-only {
         display: block;
-        width: 100%; 
-        max-height: 300px; 
-        object-fit: contain; 
-        margin: 10px 0; 
+        width: 100%;
+        max-height: 300px;
+        object-fit: contain;
+        margin: 10px 0;
     }
-
-    
 
     .usage h2 {
         font-size: 28px;
@@ -339,39 +324,42 @@ iframe {
     }
 
     .usage p, .usage li {
-        font-size: 16px; 
+        font-size: 16px;
     }
 
     .inner-container {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .contacts {
-        padding: 30px; 
+        padding: 30px;
     }
 
     .contacts h2 {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
 
     .contacts p {
-        font-size: 16px; 
+        font-size: 16px;
     }
+
     .logo {
-        width: 150px; 
-        top: 30px; 
+        width: 150px;
+        top: 30px;
         left: 20px;
     }
 }
 
 @media (min-width: 768px) {
-    .content-container2{
+    .content-container2 {
         display: flex;
     }
+
     .left, .right {
         flex: 1;
         padding: 20px;
     }
+
     .left {
         display: flex;
         justify-content: center;
@@ -385,5 +373,179 @@ iframe {
         padding: 40px;
         color: #555;
     }
-
 }
+
+.carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.carousel h3{
+    font-size: 1.8rem;
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Расстояние между кнопками */
+    margin-bottom: 20px;
+    border-radius: 20px; /* Скругление углов */
+    overflow: hidden; /* Скрыть выступающие части */
+    background-color: white; /* Фон для всего блока */
+}
+
+.tab {
+    padding: 15px 30px; /* Увеличен padding */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Плавный переход цвета */
+    flex: 1; /* Равномерное распределение ширины */
+    text-align: center;
+    color: #555;
+    border-radius: 20px;
+    font-size: 1.2rem; /* Увеличен размер шрифта */
+}
+
+.tab.active {
+    background: #ffa500;
+    color: white;
+}
+
+.tab:hover {
+    background: #ffa500;
+    color: white;
+}
+
+.content {
+    position: relative;
+    display: flex;
+}
+
+.content .block {
+    display: none;
+    width: 100%;
+}
+
+.content .block.active {
+    display: flex;
+}
+
+.content .left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.content .right {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    color: #555;
+    border-radius: 10px;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.consult-button {
+    margin-top: 40px;
+    padding: 20px 30px; /* Увеличен padding */
+    background: #ffa500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    font-size: 1.5rem;
+    font-weight: 700; /* Увеличен размер шрифта */
+}
+
+.consult-button:hover {
+    background: #e08e00;
+}
+
+.arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.arrow:hover {
+    color: #1e90ff;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .tabs {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .tab {
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content .left, .content .right {
+        flex: none;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .content img {
+        margin-bottom: 10px;
+    }
+
+    .consult-button {
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        border-radius: 10px;
+    }
+
+    .arrows {
+        position: static;
+        width: auto;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .arrow {
+        font-size: 1.5rem;
+    }
+}
+
